@@ -7,8 +7,6 @@ internal class Program
     {
         internal uint Amo { get; set; } = 0;
 
-        internal virtual void Beer() { }
-
         internal virtual void Order( string s, uint i )
         {
             if( StrComp( s, "food" ) || StrComp( s, "softdrink" ) ) {
@@ -22,13 +20,6 @@ internal class Program
     {
         bool Dis { get; set; } = false;
 
-        internal override void Beer()
-        {
-            Amo += 500;
-            Dis = true;
-            return;
-        }
-
         internal override void Order( string s, uint i )
         {
             if( StrComp( s, "food" ) == true ) {
@@ -41,11 +32,6 @@ internal class Program
             }
             return;
         }
-    }
-
-    static bool StrComp( string a, string b )
-    {
-        return string.Compare( a, b, System.StringComparison.Ordinal ) == 0;
     }
 
     static void Main()
@@ -65,7 +51,7 @@ internal class Program
             if( s.Length == 3 ) {
                 a[n].Order( s[1], uint.Parse( s[2] ) );
             } else if( StrComp( s[1], "0" ) == true ) {
-                a[n].Beer();
+                a[n].Order( "alcohol", 500 );
             } else if( StrComp( s[1], "A" ) == true ) {
                 c++;
                 WriteLine( a[n].Amo );
@@ -74,5 +60,10 @@ internal class Program
         WriteLine( c );
         Out.Flush();
         return;
+    }
+
+    static bool StrComp( string a, string b )
+    {
+        return string.Compare( a, b, System.StringComparison.Ordinal ) == 0;
     }
 }
