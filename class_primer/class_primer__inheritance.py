@@ -1,0 +1,38 @@
+class cus:
+    def __init__(self):
+        self.amo = 0
+
+    def order(self, s, i):
+        if s == "food" or s == "softdrink":
+            self.amo += i
+
+    def getAmount(self):
+        return self.amo
+
+class adu(cus):
+    def __init__(self):
+        super().__init__()
+        self.dis = False
+
+    def order(self, s, i):
+        if s == "food":
+            self.amo += i - 200 if self.dis else i
+        elif s == "softdrink":
+            self.amo += i
+        elif s == "alcohol":
+            self.amo += i
+            self.dis = True
+
+n, k = list(map(int, input().split()))
+l = []
+
+for _ in range(n):
+    a = int(input())
+
+    l.append(cus() if a < 20 else adu())
+for _ in range(k):
+    s = input().split()
+
+    l[int(s[0]) - 1].order(s[1], int(s[2]))
+for c in l:
+    print(cus.getAmount(c))
