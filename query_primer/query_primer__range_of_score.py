@@ -1,47 +1,57 @@
+# 実行時間 4510ms
 import math
+import sys
 
-n, k = list(map(int, input().split()))
+rl = sys.stdin.readline
+n, k = list(map(int, rl().split()))
 sq = math.floor(math.sqrt(n))
+o = []
 s = []
 mn = [0 for _ in range(sq)]
 mx = [0 for _ in range(sq)]
 
-for _ in range(n):
-    s.append(int(input()))
+for _ in [0] * n:
+    s.append(int(rl()))
 for i in range(sq):
     for j in range(sq):
         mn[i] = s[sq * i] if j == 0 else min(mn[i], s[sq * i + j])
         mx[i] = s[sq * i] if j == 0 else max(mx[i], s[sq * i + j])
-for _ in range(k):
-    lr = list(map(int, input().split()))
-    for i in range(len(lr)):
-        lr[i] -= 1
-    idx = lr[0]
-    amn = s[lr[0]]
-    amx = s[lr[0]]
+for _ in [0] * k:
+    al, ar, bl, br = [int(t) - 1 for t in rl().split()]
+    i = al
+    amn = s[al]
+    amx = s[al]
 
-    while idx <= lr[1]:
-        if idx % sq == 0 and idx + sq - 1 <= lr[1]:
-            amn = min(amn, mn[idx // sq])
-            amx = max(amx, mx[idx // sq])
-            idx += sq
+    while i <= ar:
+        if i % sq == 0 and i + sq - 1 <= ar:
+            if mn[i // sq] < amn:
+                amn = mn[i // sq]
+            if amx < mx[i // sq]:
+                amx = mx[i // sq]
+            i += sq
         else:
-            amn = min(amn, s[idx])
-            amx = max(amx, s[idx])
-            idx += 1
-    idx = lr[2]
+            if s[i] < amn:
+                amn = s[i]
+            if amx < s[i]:
+                amx = s[i]
+            i += 1
+    i = bl
 
-    bmn = s[lr[2]]
-    bmx = s[lr[2]]
+    bmn = s[bl]
+    bmx = s[bl]
 
-    while idx <= lr[3]:
-        if idx % sq == 0 and idx + sq - 1 <= lr[3]:
-            bmn = min(bmn, mn[idx // sq])
-            bmx = max(bmx, mx[idx // sq])
-            idx += sq
+    while i <= br:
+        if i % sq == 0 and i + sq - 1 <= br:
+            if mn[i // sq] < bmn:
+                bmn = mn[i // sq]
+            if bmx < mx[i // sq]:
+                bmx = mx[i // sq]
+            i += sq
         else:
-            bmn = min(bmn, s[idx])
-            bmx = max(bmx, s[idx])
-            idx += 1
-    print("A" if bmx - bmn < amx - amn else "B" if amx - amn < bmx - bmn else "DRAW")
-# 実行時間 9930ms
+            if s[i] < bmn:
+                bmn = s[i]
+            if bmx < s[i]:
+                bmx = s[i]
+            i += 1
+    o.append("A" if bmx - bmn < amx - amn else "B" if amx - amn < bmx - bmn else "DRAW")
+print("\n".join(o))
