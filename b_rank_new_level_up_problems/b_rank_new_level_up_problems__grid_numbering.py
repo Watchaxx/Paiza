@@ -37,5 +37,4 @@ for i in range(h):
 
     for j in range(w):
         t.append(str(a[i][j]))
-    l.append(" ".join(t))
-print("\n".join(l))
+    print(" ".join(t))
