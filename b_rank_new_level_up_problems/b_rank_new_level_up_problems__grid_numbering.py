@@ -4,7 +4,6 @@ a = [[0 for i in range(w)] for j in range(h)]
 n = 0
 y = 0
 x = 0
-l = []
 
 while n < h * w:
     if 0 <= y < h and 0 <= x < w:
