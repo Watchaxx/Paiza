@@ -6,7 +6,7 @@ class Program
 {
     static void Main()
     {
-        int[] hw = ReadLine().Split( ' ' ).Select( int.Parse ).ToArray();
+        int[] hw = ReadLine().Split().Select( int.Parse ).ToArray();
         bool[,] b = new bool[hw[0], hw[1]];
         var sb = new System.Text.StringBuilder();
 
@@ -18,7 +18,7 @@ class Program
             }
         }
 
-        int[] yx = ReadLine().Split( ' ' ).Select( int.Parse ).ToArray();
+        int[] yx = ReadLine().Split().Select( int.Parse ).ToArray();
 
         foreach( int i in Range( 0, hw[0] ) ) {
             foreach( int j in Range( 0, hw[1] ) ) {
@@ -34,5 +34,6 @@ class Program
             sb.AppendLine();
         }
         WriteLine( sb );
+        return;
     }
 }
