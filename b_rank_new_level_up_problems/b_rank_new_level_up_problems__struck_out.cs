@@ -7,20 +7,20 @@ internal class Program
 {
     static void Main()
     {
+        int a = 0;
+        int o = 0;
         int[] p = new int[9];
         int[] s = new int[9];
         int[,] b = new int[9, 4];
-        int a = 0;
-        int o = 0;
-        var l = new Lst();
+        Lst l = new Lst();
 
         foreach( int i in Range( 0, 3 ) ) {
             int[] t = ReadLine().Split().Select( int.Parse ).ToArray();
 
             foreach( int j in Range( 0, 3 ) ) {
+                o += t[j];
                 p[3 * i + j] = 3 * i + j;
                 s[3 * i + j] = t[j];
-                o += s[3 * i + j];
             }
         }
         foreach( int i in Range( 0, 9 ) ) {
@@ -95,7 +95,7 @@ internal class Program
 
     static void Permute( Lst l1, int[] l2, int a )
     {
-        for( int i = a; i < l2.Length; i++ ) {
+        for( int i = a; i < 9; i++ ) {
             int t = l2[a];
 
             l2[a] = l2[i];
@@ -105,10 +105,10 @@ internal class Program
             l2[a] = l2[i];
             l2[i] = t;
         }
-        if( a == l2.Length - 1 ) {
-            int[] n = new int[l2.Length];
+        if( a == 8 ) {
+            int[] n = new int[9];
 
-            System.Array.ConstrainedCopy( l2, 0, n, 0, l2.Length );
+            System.Array.ConstrainedCopy( l2, 0, n, 0, 9 );
             l1.Add( n );
         }
         return;
