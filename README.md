@@ -1,5 +1,6 @@
 ### C# のコーディング規約
 - `for` や `if` 等において，処理が1行のみであっても { } を省略しない
+- `if` において `!` を極力使用しない<br>`if( !a )` -> `if( a != true )` または `if( a == false )`
 - `void` のメソッドであっても最後の `return;` を省略しない
 <br>
 
@@ -9,3 +10,4 @@
 |query_primer|クエリメニュー|
 |dp_primer|DPメニュー|
 |b_rank_new_level_up_problems|新・Bランクレベルアップメニュー|
+|prob60|Bランクレベルアップメニュー|
