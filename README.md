@@ -12,3 +12,4 @@
 |b_rank_new_level_up_problems|新・Bランクレベルアップメニュー|
 |prob60|Bランクレベルアップメニュー|
 |b_rank_skillcheck_sample|Bランク・スキルチェック見本問題セット|
+|b_rank_skillcheck_archive|Bランク・スキルチェック過去問題セット|
