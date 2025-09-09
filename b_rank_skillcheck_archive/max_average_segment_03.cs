@@ -6,8 +6,8 @@ internal class Program
 {
     static void Main()
     {
-        int[] n = ReadLine().Split( ' ' ).Select( int.Parse ).ToArray();
-        int[] a = ReadLine().Split( ' ' ).Select( int.Parse ).ToArray();
+        int[] n = ReadLine().Split().Select( int.Parse ).ToArray();
+        int[] a = ReadLine().Split().Select( int.Parse ).ToArray();
         int[] b = new int[n[0] - n[1] + 1];
         int s = a.Take( n[1] ).Sum();
         var l = new System.Collections.Generic.List<int>( a.Skip( n[1] ) );
