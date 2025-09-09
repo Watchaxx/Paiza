@@ -8,7 +8,7 @@ def main():
     for _ in [0] * n:
         s.append(input())
     if n == 1:
-        return(s[0][0])
+        return s[0][0]
     for i in range(n):
         if i == m:
             continue
@@ -21,6 +21,6 @@ def main():
                 break
         if o < t:
             o = t
-    return(s[m][:o])
+    return s[m][:o]
 
 print(main())
