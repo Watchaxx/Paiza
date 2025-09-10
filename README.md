@@ -1,6 +1,6 @@
 ### C# のコーディング規約
 - `for` や `if` 等において，処理が1行のみであっても { } を省略しない
-- `if` において `!` を極力使用しない<br>`if( !a )` -> `if( a != true )` または `if( a == false )`
+- `if` において `!` を極力使用しない<br>例: `if( !a )` -> `if( a != true )` または `if( a == false )`
 - `void` のメソッドであっても最後の `return;` を省略しない
 <br>
 
@@ -13,3 +13,4 @@
 |prob60|Bランクレベルアップメニュー|
 |b_rank_skillcheck_sample|Bランク・スキルチェック見本問題セット|
 |b_rank_skillcheck_archive|Bランク・スキルチェック過去問題セット|
+|rank_test_problems_b_0001|Bランク実力確認問題セット1|
