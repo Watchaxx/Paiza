@@ -1,10 +1,13 @@
-# 実行時間 40ms
+# 実行時間 20ms
+import sys
+
+r = sys.stdin.readline
 dx = 1
 dy = 0
 n = int(input())
 
 for _ in [0] * n:
-    x = input()
+    x = r()[0]
 
     if (dx == 0 and dy == -1 and x == "/") or (dx == 0 and dy == 1 and x == "\\"):
         dx = 1
