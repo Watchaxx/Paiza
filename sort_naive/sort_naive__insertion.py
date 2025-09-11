@@ -10,4 +10,4 @@ for i in range(1, n):
         a[j + 1] = a[j]
         j -= 1
     a[j + 1] = x
-    print(" ".join(map(str, a)))
+    print(*a)
