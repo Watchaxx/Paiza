@@ -1,7 +1,10 @@
-# 実行時間 3590ms
+# 実行時間 2910ms
 # 毎回計算すると遅いのでエラトステネスの篩を使う
+import sys
+
+r=sys.stdin.readline
 X = 6000000
-n = int(input())
+n = int(r())
 p = [True] * (X + 1)
 
 p[0] = False
@@ -13,4 +16,4 @@ for i in range(2, X + 1):
             p[j] = False
             j += i
 for _ in [0] * n:
-    print("pass" if p[int(input())] else "failure")
+    print("pass" if p[int(r())] else "failure")
