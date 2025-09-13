@@ -20,3 +20,4 @@
 |sort_naive|素朴なソートアルゴリズムメニュー|
 |sort_efficient|効率的なソートアルゴリズムメニュー|
 |prime_number_primer|素数メニュー|
+|euclidean_primer|ユークリッドの互除法メニュー|
