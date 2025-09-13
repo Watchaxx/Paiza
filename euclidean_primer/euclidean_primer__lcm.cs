@@ -5,12 +5,12 @@ internal class Program
 {
     static void Main()
     {
-        ulong[] a = System.Array.ConvertAll( ReadLine().Split(), ulong.Parse );
-        WriteLine( a[0] * a[1] / Gcd( a[0], a[1] ) );
+        int[] a = System.Array.ConvertAll( ReadLine().Split(), int.Parse );
+        WriteLine( a[0] / Gcd( a[0], a[1] ) * a[1] );
         return;
     }
 
-    static ulong Gcd( ulong a, ulong b )
+    static int Gcd( int a, int b )
     {
         return b == 0 ? a : Gcd( b, a % b );
     }
