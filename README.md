@@ -2,6 +2,7 @@
 - `for` や `if` 等において，処理が1行のみであっても { } を省略しない
 - `if` において `!` を極力使用しない<br>例: `if( !a )` -> `if( a != true )` または `if( a == false )`
 - `void` のメソッドであっても最後の `return;` を省略しない
+- 細かなコードスタイルは Visual Studio のオプション内で設定し，自動書式で整形する
 <br>
 
 |Bランク獲得||
@@ -21,3 +22,4 @@
 |sort_efficient|効率的なソートアルゴリズムメニュー|
 |prime_number_primer|素数メニュー|
 |euclidean_primer|ユークリッドの互除法メニュー|
+|binary_search|二分探索メニュー|
