@@ -23,3 +23,4 @@
 |prime_number_primer|素数メニュー|
 |euclidean_primer|ユークリッドの互除法メニュー|
 |binary_search|二分探索メニュー|
+|stack_queue|スタック・キューメニュー|
