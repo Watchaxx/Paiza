@@ -24,3 +24,4 @@
 |euclidean_primer|ユークリッドの互除法メニュー|
 |binary_search|二分探索メニュー|
 |stack_queue|スタック・キューメニュー|
+|list_primer|連結リストメニュー|
