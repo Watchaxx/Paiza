@@ -2,6 +2,7 @@
 n, k, r = list(map(int, input().split()))
 s = set()
 
+s.add(r)
 for _ in [0] * (n - 1):
     a, b = list(map(int, input().split()))
 
