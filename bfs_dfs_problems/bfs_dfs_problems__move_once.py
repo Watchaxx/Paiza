@@ -10,7 +10,7 @@ for i in range(4):
     a = x + dx[i]
     b = y + dy[i]
 
-    if 0 <= b and b < h and 0 <= a and a < w:
+    if 0 <= b < h and 0 <= a < w:
         g[b][a] = "*"
 for c in g:
     print("".join(c))
