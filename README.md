@@ -15,6 +15,7 @@
 |b_rank_skillcheck_sample|Bランク・スキルチェック見本問題セット|
 |b_rank_skillcheck_archive|Bランク・スキルチェック過去問題セット|
 |rank_test_problems_b_0001|Bランク実力確認問題セット1|
+|rank_test_problems_b_0002|Bランク実力確認問題セット2|
 
 |定番アルゴリズムの習得||
 |-|-|
