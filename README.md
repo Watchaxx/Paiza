@@ -30,3 +30,4 @@
 |bfs_dfs_problems|幅優先探索・深さ優先探索メニュー|
 |sequence_search_problems_advanced|線形探索メニュー応用編|
 |sort_advanced|ソートメニュー応用編|
+|euclidean_advanced|ユークリッドの互除法メニュー応用編|
