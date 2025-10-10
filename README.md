@@ -34,3 +34,4 @@
 |prefix_sum_problems_advanced|累積和メニュー応用編|
 |binary_search_advanced|二分探索メニュー応用編|
 |stack_queue_advanced|スタック・キューメニュー応用編|
+|list_advanced|リストメニュー応用編|
