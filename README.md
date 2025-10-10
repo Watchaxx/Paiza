@@ -31,3 +31,5 @@
 |sequence_search_problems_advanced|線形探索メニュー応用編|
 |sort_advanced|ソートメニュー応用編|
 |euclidean_advanced|ユークリッドの互除法メニュー応用編|
+|prefix_sum_problems_advanced|累積和メニュー応用編|
+|binary_search_advanced|二分探索メニュー応用編|
