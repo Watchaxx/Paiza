@@ -1,4 +1,5 @@
 // 実行時間 30ms
+using System;
 using static System.Console;
 using static System.Linq.Enumerable;
 
@@ -19,7 +20,7 @@ internal class Program
             p[i] = int.Parse( ReadLine() );
         }
         TwoOpt( n[0], n[1], p, x );
-        WriteLine( string.Join( System.Environment.NewLine, p ) );
+        WriteLine( string.Join( Environment.NewLine, p ) );
         return;
     }
 
@@ -27,7 +28,7 @@ internal class Program
     {
         double a = x[0] - y[0];
         double b = x[1] - y[1];
-        return System.Math.Sqrt( a * a + b * b );
+        return Math.Sqrt( a * a + b * b );
     }
 
     static void PickTwo( ref int a, ref int b, int n )
@@ -63,7 +64,7 @@ internal class Program
                 int k = a + 1;
                 int l = b - a;
 
-                System.Array.Copy( p.Skip( k ).Take( l ).Reverse().ToArray(), 0, p, k, l );
+                Array.Copy( p.Skip( k ).Take( l ).Reverse().ToArray(), 0, p, k, l );
             }
         }
         return;
