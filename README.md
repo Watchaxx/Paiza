@@ -35,3 +35,5 @@
 |binary_search_advanced|二分探索メニュー応用編|
 |stack_queue_advanced|スタック・キューメニュー応用編|
 |list_advanced|リストメニュー応用編|
+|tsp_problems|巡回セールスマン問題メニュー|
+|bfs_dfs_problems_advanced|幅優先・深さ優先探索メニュー応用編|
