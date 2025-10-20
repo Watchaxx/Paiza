@@ -37,3 +37,4 @@
 |list_advanced|リストメニュー応用編|
 |tsp_problems|巡回セールスマン問題メニュー|
 |bfs_dfs_problems_advanced|幅優先・深さ優先探索メニュー応用編|
+|binary_search_related|二分探索関連アルゴリズムメニュー|
