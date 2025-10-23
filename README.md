@@ -38,3 +38,5 @@
 |tsp_problems|巡回セールスマン問題メニュー|
 |bfs_dfs_problems_advanced|幅優先・深さ優先探索メニュー応用編|
 |binary_search_related|二分探索関連アルゴリズムメニュー|
+|hash_advanced|ハッシュメニュー応用|
+|seqdp_problems|列に関するDPメニュー|
