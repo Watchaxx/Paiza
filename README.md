@@ -40,3 +40,5 @@
 |binary_search_related|二分探索関連アルゴリズムメニュー|
 |hash_advanced|ハッシュメニュー応用|
 |seqdp_problems|列に関するDPメニュー|
+|binary_exponentiation|繰り返し二乗法・ダブリングメニュー|
+matrix_problems|行列計算メニュー|
