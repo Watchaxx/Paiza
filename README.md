@@ -17,8 +17,8 @@
 |rank_test_problems_b_0001|Bランク実力確認問題セット1|
 |rank_test_problems_b_0002|Bランク実力確認問題セット2|
 
-|定番アルゴリズムの習得||
-|-|-|
+|定番アルゴリズムの習得||||
+|-|-|-|-|
 |sort_naive|素朴なソートアルゴリズムメニュー|sort_efficient|効率的なソートアルゴリズムメニュー|
 |prime_number_primer|素数メニュー|euclidean_primer|ユークリッドの互除法メニュー|
 |binary_search|二分探索メニュー|stack_queue|スタック・キューメニュー|
