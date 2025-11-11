@@ -31,4 +31,5 @@
 |binary_search_related|二分探索関連アルゴリズムメニュー|hash_advanced|ハッシュメニュー応用|
 |seqdp_problems|列に関するDPメニュー|binary_exponentiation|繰り返し二乗法・ダブリングメニュー|
 |matrix_problems|行列計算メニュー|binary_indexed_tree|Binary Indexed Treeメニュー|
-|sqrt_decomposition|平方分割メニュー|
+|sqrt_decomposition|平方分割メニュー|bit_exhaustive_search|bit全探索メニュー|
+|bit_dp|bitDPメニュー|knapsack_problem|ナップサックメニュー|
