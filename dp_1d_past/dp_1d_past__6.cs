@@ -18,3 +18,17 @@ internal class Program
         return;
     }
 }
+
+// 実行時間 20ms
+using static System.Console;
+using static System.Linq.Enumerable;
+
+internal class Program
+{
+    static void Main()
+    {
+        int n = int.Parse( ReadLine() );
+        WriteLine( Range( 0, 32 ).Where( x => 0 < ( ( n >> x ) & 1 ) ).Count() );
+        return;
+    }
+}
