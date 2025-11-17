@@ -33,3 +33,5 @@
 |matrix_problems|行列計算メニュー|binary_indexed_tree|Binary Indexed Treeメニュー|
 |sqrt_decomposition|平方分割メニュー|bit_exhaustive_search|bit全探索メニュー|
 |bit_dp|bitDPメニュー|knapsack_problem|ナップサックメニュー|
+|dp_game|ゲーム・確率DPメニュー|dp_1d_past|一次元過去DPメニュー|
+|dp_multi|多次元DPメニュー|dp_2d|二次元DPメニュー|
