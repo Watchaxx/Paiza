@@ -1,0 +1,156 @@
+// 実行時間 20ms
+using static System.Console;
+using static System.Linq.Enumerable;
+
+class Program
+{
+    class Node
+    {
+        internal int Val { get; set; }
+        internal Node Left { get; set; }
+        internal Node Parent { get; set; }
+        internal Node Right { get; set; }
+
+        internal Node( int n )
+        {
+            Val = n;
+            Left = null;
+            Parent = null;
+            Right = null;
+        }
+    }
+
+    static void Main()
+    {
+        Node t = null;
+
+        ReadLine();
+        foreach( int i in ReadLine().Split().Select( int.Parse ) ) {
+            t = Insert( t, new Node( i ) );
+        }
+        Preorder( RotateL( t, Search( int.Parse( ReadLine() ), t ) ) );
+        return;
+    }
+
+    static int Height( Node n )
+    {
+        if( n == null ) {
+            return 0;
+        }
+
+        int l = Height( n.Left );
+        int r = Height( n.Right );
+
+        return new[] { l, r }.Max() + 1;
+    }
+
+    static Node Insert( Node r, Node n )
+    {
+        if( r == null ) {
+            return n;
+        }
+        if( n.Val < r.Val ) {
+            r.Left = Insert( r.Left, n );
+            r.Left.Parent = r;
+        } else {
+            r.Right = Insert( r.Right, n );
+            r.Right.Parent = r;
+        }
+        return r;
+    }
+
+    static void Preorder( Node n )
+    {
+        if( n == null ) {
+            return;
+        }
+        WriteLine( n.Val );
+        Preorder( n.Left );
+        Preorder( n.Right );
+        return;
+    }
+
+    static Node Remove( int v, Node n )
+    {
+        if( n == null ) {
+            return n;
+        } else if( v < n.Val ) {
+            n.Left = Remove( v, n.Left );
+        } else if( n.Val < v ) {
+            n.Right = Remove( v, n.Right );
+        } else {
+            if( n.Left == null ) {
+                return n.Right;
+            } else if( n.Right == null ) {
+                return n.Left;
+            } else {
+                Node m = n.Right;
+
+                while( m.Left != null ) {
+                    m = m.Left;
+                }
+                n.Val = m.Val;
+                n.Right = Remove( m.Val, n.Right );
+            }
+        }
+        return n;
+    }
+
+    static Node RotateL( Node r, Node n )
+    {
+        if( n == null || n.Right == null ) {
+            return r;
+        }
+
+        Node t = n.Right;
+
+        n.Right = t.Left;
+        if( t.Left != null ) {
+            t.Left.Parent = n;
+        }
+        t.Parent = n.Parent;
+        if( n.Parent == null ) {
+            r = t;
+        } else if( n == n.Parent.Left ) {
+            n.Parent.Left = t;
+        } else {
+            n.Parent.Right = t;
+        }
+        t.Left = n;
+        n.Parent = t;
+        return r;
+    }
+
+    static Node RotateR( Node r, Node n )
+    {
+        if( n == null || n.Left == null ) {
+            return r;
+        }
+
+        Node t = n.Left;
+
+        n.Left = t.Right;
+        if( t.Right != null ) {
+            t.Right.Parent = n;
+        }
+        t.Parent = n.Parent;
+        if( n.Parent == null ) {
+            r = t;
+        } else if( n == n.Parent.Left ) {
+            n.Parent.Left = t;
+        } else {
+            n.Parent.Right = t;
+        }
+        t.Right = n;
+        n.Parent = t;
+        return r;
+    }
+
+    static Node Search( int v, Node n )
+    {
+        if( n == null || n.Val == v ) {
+            return n;
+        }
+        return v < n.Val ? Search( v, n.Left ) : Search( v, n.Right );
+    }
+}
