@@ -23,9 +23,9 @@ class Program
         WriteLine( 1 );
         return;
     Nx:
-        if( Range( 0, a ).Where( x => li[x] == lo[x] + 1 ).Count() == 1 ) {
-            if( Range( 0, a ).Where( x => li[x] + 1 == lo[x] ).Count() == 1 ) {
-                if( Range( 0, a ).Where( x => li[x] == lo[x] ).Count() == a - 2 ) {
+        if( Range( 0, a ).Count( x => li[x] == lo[x] + 1 ) == 1 ) {
+            if( Range( 0, a ).Count( x => li[x] + 1 == lo[x] ) == 1 ) {
+                if( Range( 0, a ).Count( x => li[x] == lo[x] ) == a - 2 ) {
                     WriteLine( 1 );
                     return;
                 }
