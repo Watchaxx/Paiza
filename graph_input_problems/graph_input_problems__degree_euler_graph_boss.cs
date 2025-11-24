@@ -7,29 +7,24 @@ class Program
     static void Main()
     {
         const int a = 26;
-        int n = int.Parse( ReadLine() );
         int[] li = new int[a];
         int[] lo = new int[a];
 
-        foreach( int _ in Range( 0, n ) ) {
+        foreach( int _ in Range( 0, int.Parse( ReadLine() ) ) ) {
             string s = ReadLine();
 
             li[s[0] - 'a']++;
             lo[s.Last() - 'a']++;
         }
-        foreach( int _ in Range( 0, a ).Where( x => li[x] != lo[x] ) ) {
-            goto Nx;
+        if( Range( 0, a ).All( x => li[x] == lo[x] ) ) {
+            WriteLine( 1 );
+            return;
         }
-        WriteLine( 1 );
-        return;
-    Nx:
-        if( Range( 0, a ).Count( x => li[x] == lo[x] + 1 ) == 1 ) {
-            if( Range( 0, a ).Count( x => li[x] + 1 == lo[x] ) == 1 ) {
-                if( Range( 0, a ).Count( x => li[x] == lo[x] ) == a - 2 ) {
-                    WriteLine( 1 );
-                    return;
-                }
-            }
+        if( Range( 0, a ).Count( x => li[x] == lo[x] + 1 ) == 1
+            && Range( 0, a ).Count( x => li[x] + 1 == lo[x] ) == 1
+            && Range( 0, a ).Count( x => li[x] == lo[x] ) == a - 2 ) {
+            WriteLine( 1 );
+            return;
         }
         WriteLine( 0 );
         return;
