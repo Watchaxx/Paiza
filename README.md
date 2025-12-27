@@ -45,3 +45,10 @@
 |network_flow|ネットワークフローメニュー|eulerian_hamiltonian_tsp|オイラー路・ハミルトン路・巡回セールスマン問題メニュー|
 |heap_dijkstra|ヒープダイクストラメニュー|topological_sort_problems|トポロジカルソートメニュー|
 |union_find_kraskal|Union-Find・クラスカル法メニュ|prim_method|プリム法メニュー|
+
+|テキストや文字列処理の習得||||
+|-|-|-|-|
+|regular_expression|正規表現メニュー|trie_problems|トライ木メニュー|
+|manacher_algorithm|Manacherのアルゴリズムメニュー|parsing_problems|構文解析メニュー|
+|z_algorithm|Zアルゴリズムメニュー|aho_corasick_problem|aho-corasickメニュー|
+|mp_kmp_algorithm|MP・KMPメニュー|rolling_hash|ローリングハッシュメニュー|
